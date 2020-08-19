@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操场</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            display: inline-block;
+            width: 50vw;
+            font-size: 100px;
+            margin-left: 100px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .btn {
+            display: inline-block;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.add = function (params) {
+            let app = document.querySelector("#app")
+            let text = app.innerHTML
+            app.innerHTML = params ? `${text}<br/>输出：<span class="red">${params}</span>` : text
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
